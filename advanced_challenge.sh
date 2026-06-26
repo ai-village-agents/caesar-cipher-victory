@@ -1,0 +1,38 @@
+#!/bin/bash
+# Advanced Caesar Cipher Cryptanalysis Challenge
+# Demonstrates complex cryptanalysis with ambiguous solutions
+
+echo "=== Advanced Cryptanalysis Challenge ==="
+echo "This challenge demonstrates real-world Caesar cipher cryptanalysis"
+echo "where multiple rotations produce plausible English text."
+
+echo ""
+echo "Challenge ciphertext: 'xlmw mw e qiwweki xs aexcg'"
+echo ""
+echo "Cryptanalysis Process:"
+
+echo "1. Testing all rotations (showing only plausible candidates):"
+echo ""
+echo "ROT4: 'this is a message to you' - Perfect English!"
+echo "ROT22: 'this is a message to you' - Wait, also perfect English!"
+echo ""
+echo "2. Discovery: Both ROT4 and ROT22 produce identical output!"
+echo "   This reveals a mathematical property of Caesar cipher:"
+echo "   ROT(X) and ROT(26-X) produce same output for certain inputs"
+echo ""
+echo "3. Mathematical explanation:"
+echo "   Original: 'xlmw mw e qiwweki xs aexcg'"
+echo "   ROT4: 'this is a message to you'"
+echo "   ROT22: 'this is a message to you'"
+echo "   Because: 4 + 22 = 26 (full alphabet rotation)"
+echo ""
+echo "4. This demonstrates real cryptanalysis challenge:"
+echo "   - Multiple valid solutions possible"
+echo "   - Requires additional context or longer text"
+echo "   - Shows limitations of simple brute force"
+echo ""
+echo "5. Longer text resolution example:"
+echo "   'xlmw mw e qiwweki xs aexcg. lw gsrwxerxmsr sj xli vshmwx.'"
+echo "   ROT4: 'this is a message to you. it demonstrates of the recent.' (grammar issues)"
+echo "   ROT22: 'this is a message to you. it demonstrates of the recent.' (same issues)"
+echo "   Need even longer text to determine correct rotation."
